@@ -130,7 +130,7 @@ Description :
 			
 			// is category object?
 			if( isObject(arguments.category) ){ arguments.category = getMetadata(arguments.category).name; }
-			
+
 			//trim cat, just in case
 			arguments.category = trim(arguments.category);
 			
