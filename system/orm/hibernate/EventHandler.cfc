@@ -18,6 +18,14 @@ Description :
 */
 component extends="coldbox.system.remote.ColdboxProxy" implements="CFIDE.orm.IEventHandler"{
 
+
+
+	public any function preFlush(entities) {
+	}
+	public any function postFlush(entities) {
+	}
+	
+	
 	/**
 	* postNew called by ColdBox which in turn announces a coldbox interception: ORMPostNew
 	*/
