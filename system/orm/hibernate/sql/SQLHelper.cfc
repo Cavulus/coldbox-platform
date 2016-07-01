@@ -39,8 +39,8 @@ component displayName="SQLHelper" accessors="true" {
         variables.ormSession    = criteriaImpl.getSession();
         variables.factory       = ormSession.getFactory();
         // get formatter for sql string beautification
-        variables.formatter     = createObject( "java", "org.hibernate.jdbc.util.BasicFormatterImpl" );
-        // set properties
+        variables.formatter     = createObject( "java", "org.hibernate.engine.jdbc.internal.BasicFormatterImpl" );
+        // set properties                                
         variables.log           = [];
         variables.formatSQL     = arguments.formatSQL;
         variables.returnExecutableSql = arguments.returnExecutableSql;
