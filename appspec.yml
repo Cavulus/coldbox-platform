@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /srv/www/colbox
+hooks:
+#  ApplicationStop:
+#  - location: ApplicationStop.sh
+#    runas: root
+  BeforeInstall:
+  - location: deregister_from_elb.sh
+    runas: root
+  ApplicationStart:
+  - location: ApplicationStart.sh
+    runas: root
+  ValidateService:
+  - location: register_with_elb.sh
+    runas: root
+
